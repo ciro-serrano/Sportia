@@ -1,5 +1,11 @@
+import ItemListContainer from "./components/ItemListContainer";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <ItemListContainer />
+    </div>
+  );
 };
 
 export default App;

@@ -48,7 +48,7 @@ const mockProducts = [
     img: "https",
   },
   {
-    id: 6,
+    id: 7,
     name: "pantalon largo",
     category: "running",
     price: 55000,
@@ -56,7 +56,7 @@ const mockProducts = [
     img: "https",
   },
   {
-    id: 7,
+    id: 8,
     name: "bolso",
     category: "accesorios",
     price: 45000,
@@ -64,7 +64,7 @@ const mockProducts = [
     img: "https",
   },
   {
-    id: 8,
+    id: 9,
     name: "abrigo",
     category: "running",
     price: 60000,
