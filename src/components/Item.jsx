@@ -10,9 +10,10 @@ const Item = ({ product }) => {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
+        height="240"
+        image={product.img}
         alt={product.name}
+        sx={{ objectFit: "contain" }}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
