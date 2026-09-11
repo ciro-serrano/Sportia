@@ -6,6 +6,7 @@ import {
   Box,
   Chip,
 } from "@mui/material";
+import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ product }) => {
   return (
@@ -48,6 +49,12 @@ const ItemDetail = ({ product }) => {
             color={product.stock > 0 ? "success" : "error"}
           />
         </Box>
+        <ItemCount
+          stock={product.stock}
+          onAdd={(cantidad) =>
+            console.log(`Agregando ${cantidad} de ${product.name}`)
+          }
+        />
       </CardContent>
     </Card>
   );
