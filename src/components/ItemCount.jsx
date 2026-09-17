@@ -16,8 +16,8 @@ const ItemCount = ({ stock, onAdd }) => {
   return (
     <div>
       <Button
-        variant="contained"
-        color="primary"
+        variant="outlined"
+        color="info"
         onClick={agregarItem}
         disabled={cantidad === stock || stock === 0}
       >
@@ -25,8 +25,8 @@ const ItemCount = ({ stock, onAdd }) => {
       </Button>
 
       <Button
-        variant="contained"
-        color="secondary"
+        variant="outlined"
+        color="error"
         onClick={quitarItem}
         disabled={cantidad === 1 || stock === 0}
       >

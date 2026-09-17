@@ -8,7 +8,12 @@ import {
 } from "@mui/material";
 import ItemCount from "./ItemCount";
 
+import { useContext, useState } from "react";
+import { CartContext } from "../context/CartContext";
+
 const ItemDetail = ({ product }) => {
+  const { addToCart } = useContext(CartContext);
+  const [agregado, setAgregado] = useState(false);
   return (
     <Card
       sx={{
@@ -49,12 +54,17 @@ const ItemDetail = ({ product }) => {
             color={product.stock > 0 ? "success" : "error"}
           />
         </Box>
-        <ItemCount
-          stock={product.stock}
-          onAdd={(cantidad) =>
-            console.log(`Agregando ${cantidad} de ${product.name}`)
-          }
-        />
+        {agregado ? (
+          <Typography> Producto agregado al carrito</Typography>
+        ) : (
+          <ItemCount
+            stock={product.stock}
+            onAdd={(cantidad) => {
+              addToCart(product, cantidad);
+              setAgregado(true);
+            }}
+          />
+        )}
       </CardContent>
     </Card>
   );
