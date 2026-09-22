@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
 const pages = [
   { label: "Running", path: "/category/running" },
@@ -98,6 +99,7 @@ const NavBar = () => {
               </Button>
             ))}
           </Box>
+          <CartWidget />
         </Toolbar>
       </Container>
     </AppBar>
