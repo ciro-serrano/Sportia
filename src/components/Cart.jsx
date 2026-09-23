@@ -2,6 +2,8 @@ import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 import CartItem from "./CartItem";
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
@@ -16,6 +18,9 @@ const Cart = () => {
         <CartItem key={item.id} item={item} />
       ))}
       <Typography>TOTAL : ${total}</Typography>
+      <Link to={"/checkout"}>
+        <Button> Ir a pagar </Button>
+      </Link>
     </div>
   );
 };
